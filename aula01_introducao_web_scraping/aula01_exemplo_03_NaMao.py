@@ -54,15 +54,15 @@ while True:
     
     # --- Extraindo o PREÇO ---
     # O preço está dentro de uma tag <p class="price_color">
-    # marcador_preco = '<p class="price_color">Â£' # Incluímos o símbolo da moeda
-    # inicio_preco = html_livro.find(marcador_preco) + len(marcador_preco)
-    # fim_preco = html_livro.find('</p>', inicio_preco)
-    # preco_str = html_livro[inicio_preco:fim_preco]
+    marcador_preco = '<p class="price_color">Â£' # Incluímos o símbolo da moeda
+    inicio_preco = html_livro.find(marcador_preco) + len(marcador_preco)
+    fim_preco = html_livro.find('</p>', inicio_preco)
+    preco_str = html_livro[inicio_preco:fim_preco]
 
-    # dados = {'titulo': titulo, 'preco': preco_str}
+    dados = {'titulo': titulo, 'preco': preco_str}
     
-    dados = {'titulo': titulo}
-    print(titulo)
+    #dados = {'titulo': titulo}
+    print(dados)
 
     livros_extraidos_manual.append(dados)
     

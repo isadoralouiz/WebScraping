@@ -37,8 +37,8 @@ try:
         ]  # O título completo está no atributo 'title' da tag <a>
 
         # O preço está dentro de uma tag <p> com a classe 'price_color'.
-        preco_tag = livro.find("p", class_="price_color")
-        preco = preco_tag.text.strip()
+        preco_tag = livro.find("p", class_="price_c olor")
+        preco = float(preco_tag.text.strip()[2:])
 
         # Imprimir os dados de forma organizada.
         print(f"Título: {titulo}")
